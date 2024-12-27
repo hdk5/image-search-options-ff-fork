@@ -3,7 +3,7 @@ import stylistic from '@stylistic/eslint-plugin'
 
 export default [
   {
-    ignores: ['lib'],
+    ignores: ['src/lib'],
   },
   {
     ...stylistic.configs['recommended-flat'],

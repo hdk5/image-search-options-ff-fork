@@ -9,6 +9,18 @@ export default [
     ...stylistic.configs['recommended-flat'],
   },
   {
+    files: ['**/*.json'],
+    languageOptions: {
+      parser: format.parserPlain,
+    },
+    plugins: {
+      format,
+    },
+    rules: {
+      'format/prettier': ['error', { parser: 'json', tabWidth: 2 }],
+    },
+  },
+  {
     files: ['**/*.css'],
     languageOptions: {
       parser: format.parserPlain,

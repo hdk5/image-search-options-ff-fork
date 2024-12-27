@@ -267,8 +267,11 @@ chrome.runtime.onMessage.addListener(function (message) {
 })
 
 function help() {
-  chrome.tabs.create({
-    url: '/help.html',
+  chrome.tabs.getCurrent().then((tab) => {
+    chrome.tabs.create({
+      url: '/help.html',
+      openerTabId: tab.id,
+    })
   })
 }
 

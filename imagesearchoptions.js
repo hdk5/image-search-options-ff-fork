@@ -319,12 +319,6 @@ var imagesearchoptions = {
 
   openTab: function (tabURL, tabType) {
     switch (tabType) {
-      case '0': // new active tab
-        chrome.tabs.create({
-          url: tabURL,
-          active: true,
-        })
-        break
       case '1': // current tab
         chrome.tabs.update({
           url: tabURL,
@@ -339,6 +333,7 @@ var imagesearchoptions = {
         chrome.tabs.create({
           url: tabURL,
           active: false,
+          openerTabId: currentTab.id,
         })
         break
       case '4': // new private window
@@ -350,29 +345,31 @@ var imagesearchoptions = {
       case '5': // new tab next to current
         chrome.tabs.query({
           active: true,
+          currentWindow: true,
         }, (tabs) => {
-          let index = tabs[0].index
+          let tab = tabs[0]
           chrome.tabs.create({
             url: tabURL,
             active: true,
-            index: index + 1,
+            openerTabId: tab.id,
           })
         })
         break
       case '6': // new bg tab next to current
         chrome.tabs.query({
           active: true,
+          currentWindow: true,
         }, (tabs) => {
-          let index = tabs[0].index
+          let tab = tabs[0]
           chrome.tabs.create({
             url: tabURL,
             active: false,
-            index: index + 1,
+            openerTabId: tab.id,
           })
         })
         break
+      case '0': // new active tab
       default:
-        // same as for case 0
         chrome.tabs.create({
           url: tabURL,
           active: true,

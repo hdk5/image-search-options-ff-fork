@@ -69,7 +69,7 @@ var imagesearchoptions = {
       var newDefaults = [
         [1, 'SauceNAO', 'icons/saucenao.ico', true, true, 'https://saucenao.com/search.php', 'url=::$URL::', '?', '&', false, false, 'http://saucenao.com/search.php', 'url=::$URL::', '?', '&', false, true],
         [2, 'IQDB', 'icons/iqdb.ico', true, true, 'https://iqdb.org/', 'url=::$URL::', '?', '&', false, false, 'https://iqdb.org/', 'url=::$URL::', '?', '&', false, true],
-        [3, 'Google', 'icons/google.ico', true, true, 'http://www.google.com/searchbyimage', 'image_url=::$URL::', '?', '&', false, false, 'http://www.google.com/searchbyimage/upload', 'encoded_image=::$IMGDATA::', '?', '&', true, false],
+        [3, 'Google', 'icons/google.ico', true, true, 'https://lens.google.com/uploadbyurl', 'url=::$URL::', '?', '&', false, false, 'https://lens.google.com/uploadbyurl', 'url=::$URL::', '?', '&', false, true],
         [4, 'Ascii2D', 'icons/ascii2d.ico', true, true, 'https://www.ascii2d.net/imagesearch/search/', 'uri=::$URL::', '?', '&', true, false, 'https://www.ascii2d.net/imagesearch/search/', 'upload[file]=::$IMGDATA::', '?', '&', true, false],
         [5, 'WhatAnime', 'icons/whatanime.ico', true, true, 'https://trace.moe/', 'url=::$URL::', '?', '&', false, false, 'https://trace.moe/', 'url=::$URL::', '?', '&', false, true],
         [6, 'TinEye', 'icons/tineye.ico', true, true, 'https://www.tineye.com/search', 'url=::$URL::', '?', '&', false, false, 'https://www.tineye.com/search', 'image=::$IMGDATA::', '?', '&', true, false],

@@ -1,9 +1,8 @@
-body  {
-	font-family: ‘Lucida Grande’, Verdana, sans-serif;
-	font-size: 12px;
+body {
+  font-family: "Lucida Grande", Verdana, sans-serif;
+  font-size: 12px;
 }
 
 fieldset {
-	background-color: #f8f8f8; 
-	
+  background-color: #f8f8f8;
 }
